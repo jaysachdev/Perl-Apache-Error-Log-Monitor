@@ -87,6 +87,7 @@ sub sendError() {
   }
 
   if ($email) {
+	  # note: the $sendmail and $email variables aren't escaped, be careful.
 	  open(MAIL, '| ' . $sendmail . ' "' . $email . '"') || (print "\n\nEMAIL NOT SENT!!!\n\n" && return 0);
 	  print MAIL 'To: <' . $email . '>' . "\n";
 	  print MAIL 'From: <' . $email . '>' . "\n";
