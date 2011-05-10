@@ -1,0 +1,8 @@
+This script will monitor your Apache error log in realtime for any PHP Errors, 
+and will email and / or send an HTTP request with the error message when it 
+finds one.
+
+Either enter your log path into the script, or at the command line when the
+script starts.
+
+We use the HTTP request to trigger SMS alerts.
